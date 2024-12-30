@@ -69,7 +69,7 @@ public class ParkingSpot {
             if(!occupiedByCar.getPlate().equals(v.getPlate())) {
                 occupiedByCar.setPenalisation(occupiedByCar.getPenalisation()+1);
                 try {
-                    PreparedStatement st = connection.prepareStatement("INSERT INTO Penalisation (Vehicle, Owner, Penalisation) VALUES (?, ?, ?)");
+                    PreparedStatement st = connection.prepareStatement("INSERT INTO penalisation (Vehicle, Owner, Penalisation) VALUES (?, ?, ?)");
                     st.setString(1, occupiedByCar.getPlate());
                     Statement st_SearchOwnerName = connection.createStatement();
                     ResultSet rs = st_SearchOwnerName.executeQuery("SELECT username FROM accounts WHERE ID=" + occupiedByCar.getOwner() + " LIMIT 1");
