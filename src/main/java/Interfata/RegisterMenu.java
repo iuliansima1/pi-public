@@ -26,15 +26,20 @@ public class RegisterMenu {
         rMainGrid.setLayout(new GridLayout(5,1));
         JPanel topText = new JPanel();
         topText.setLayout(new FlowLayout());
-        topText.add(new JLabel("Register a new account"));
+        JLabel topTextRegLabel = new JLabel("Register a new account");
+        topText.add(topTextRegLabel);
+        topTextRegLabel.setFont(new Font("Serif", Font.BOLD, 16));
         rMainGrid.add(topText);
         JPanel rUsernamePanel = new JPanel();
         rUsernamePanel.setLayout(new FlowLayout());
         JLabel rUsernameLabel = new OutlineLabel("Username: ");
+        rUsernameLabel.setFont(new Font("Serif", Font.PLAIN, 20));
 
         JPasswordField tarPassword = new JPasswordField(24);
+        tarPassword.setFont(new Font("Serif", Font.PLAIN, 20));
 
         tarUsername = new JTextField(24);
+        tarUsername.setFont(new Font("Serif", Font.PLAIN, 20));
         tarUsername.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         tarUsername.requestFocusInWindow();
         tarUsername.addActionListener(e->tarPassword.requestFocusInWindow());
@@ -45,13 +50,16 @@ public class RegisterMenu {
         JPanel rPasswordPanel = new JPanel();
         rPasswordPanel.setLayout(new FlowLayout());
         JLabel rPasswordLabel = new OutlineLabel("Password: ");
+        rPasswordLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         rPasswordPanel.add(rPasswordLabel);
         rPasswordPanel.add(tarPassword);
         rMainGrid.add(rPasswordPanel);
         JPanel rEmailPanel = new JPanel();
         rEmailPanel.setLayout(new FlowLayout());
         JLabel rEmailLabel = new OutlineLabel("Email: ");
+        rEmailLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         tarEmail = new JTextField(24);
+        tarEmail.setFont(new Font("Serif", Font.PLAIN, 20));
         tarEmail.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         rEmailPanel.add(rEmailLabel);
         rEmailPanel.add(tarEmail);

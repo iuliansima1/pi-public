@@ -45,7 +45,7 @@ public class PenalisationMenu {
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM penalisation ORDER BY Time DESC");
             while (rs.next()) {
-                model.addRow(new Object[]{rs.getString("Vehicle"), rs.getString("Owner"), rs.getInt("Penalisation"), rs.getTimestamp("Time")});
+                model.addRow(new Object[]{rs.getString("Vehicle"), rs.getString("Owner"), rs.getInt("Penalisation"), rs.getString("Time")});
             }
             rs.close();
             st.close();

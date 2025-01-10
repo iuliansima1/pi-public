@@ -28,6 +28,7 @@ public class UserMainMenu {
         JPanel userTitlePanel = new JPanel();
         userTitlePanel.setLayout(new FlowLayout());
         userTitleLabel = new JLabel("<html><center>Hello, "+ getUserName() +"!<br>User menu<center></html>");
+        userTitleLabel.setFont(new Font("Serif", Font.BOLD, 16));
         userTitlePanel.add(userTitleLabel);
         JPanel userSearchPanel = new JPanel();
         userSearchPanel.setLayout(new FlowLayout());

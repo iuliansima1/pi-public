@@ -51,12 +51,14 @@ public class SearchParkingMenu {
         JPanel sbTitle = new JPanel();
         sbTitle.setLayout(new FlowLayout());
         sbTitle.add(new OutlineLabel("Search for parking:"));
+
         sbMainMenu.add(sbTitle);
         sbTitle.setOpaque(false);
 
         JPanel sbAvailableZonesPanel = new JPanel();
         sbAvailableZonesPanel.setLayout(new WrapLayout());
         JLabel sbAvailableZonesLabel = new JLabel("");
+        sbAvailableZonesLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         StringBuilder zones_text = new StringBuilder();
         if(getZones().isEmpty())zones_text.append("<html><center>Available zones for parking: <p style='Color:red'>none</p></center></html>");
         else {
@@ -90,8 +92,10 @@ public class SearchParkingMenu {
         sbChooseZonePanel.setLayout(new FlowLayout());
         sbChooseZonePanel.setOpaque(false);
         JLabel sbChooseZoneLabel = new OutlineLabel("Name of the zone: ");
+        sbChooseZoneLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         sbChooseZonePanel.add(sbChooseZoneLabel);
         JTextField sbChooseZoneText = new JTextField(10);
+        sbChooseZoneText.setFont(new Font("Serif", Font.PLAIN, 20));
         sbChooseZoneText.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         sbChooseZonePanel.add(sbChooseZoneText);
         sbMainMenu.add(sbChooseZonePanel);
@@ -99,6 +103,7 @@ public class SearchParkingMenu {
         JPanel sbAvailableCarsPanel = new JPanel();
         sbAvailableCarsPanel.setLayout(new WrapLayout());
         JLabel sbAvailableCarsLabel = new JLabel("");
+        sbAvailableCarsLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         if(getOwnedVehicles() == null) sbAvailableCarsLabel.setText("<html><center>Available cars for parking: <p style='Color:red'>none</p></center></html>");
         else {
             boolean carNorParked = false;
@@ -132,8 +137,10 @@ public class SearchParkingMenu {
         sbChooseCarPanel.setLayout(new FlowLayout());
         sbChooseCarPanel.setOpaque(false);
         JLabel sbChooseCarLabel = new OutlineLabel("Plate of the car: ");
+        sbChooseCarLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         sbChooseCarPanel.add(sbChooseCarLabel);
         JTextField sbChooseCarText = new JTextField(10);
+        sbChooseCarText.setFont(new Font("Serif", Font.PLAIN, 20));
         sbChooseCarText.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         sbChooseCarPanel.add(sbChooseCarText);
         sbChooseZoneText.addActionListener(e->sbChooseCarText.requestFocusInWindow());
@@ -143,8 +150,10 @@ public class SearchParkingMenu {
         sbChooseHourPanel.setLayout(new FlowLayout());
         sbChooseHourPanel.setOpaque(false);
         JLabel sbChooseHourLabel = new OutlineLabel("How many hours to park?: ");
+        sbChooseHourLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         sbChooseHourPanel.add(sbChooseHourLabel);
         JTextField sbChooseHourText = new JTextField(10);
+        sbChooseHourText.setFont(new Font("Serif", Font.PLAIN, 20));
         sbChooseCarText.addActionListener(e->sbChooseHourText.requestFocusInWindow());
         sbChooseHourText.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 

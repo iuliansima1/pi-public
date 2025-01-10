@@ -36,8 +36,11 @@ public class AddVehicleMenu {
 
         JPanel avAddVehicle = new JPanel();
         avAddVehicle.setLayout(new FlowLayout());
-        avAddVehicle.add(new OutlineLabel("Vehicle plate: "));
+        OutlineLabel vehPlateLabel = new OutlineLabel("Vehicle plate: ");
+        avAddVehicle.add(vehPlateLabel);
+        vehPlateLabel.setFont(new Font("Serif", Font.PLAIN, 20));
         JTextField avJTA = new JTextField(24);
+        avJTA.setFont(new Font("Serif", Font.PLAIN, 20));
         avJTA.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         avAddVehicle.add(avJTA);
         avMainMenu.add(avAddVehicle);

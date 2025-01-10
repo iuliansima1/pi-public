@@ -26,14 +26,20 @@ public class LoginMenu {
         lMainGrid.setLayout(new GridLayout(4,1));
         JPanel topText = new JPanel();
         topText.setLayout(new FlowLayout());
-        topText.add(new OutlineLabel("Login to your account"));
+        OutlineLabel topTextLabel = new OutlineLabel("Login to your account");
+        topText.add(topTextLabel);
+        topTextLabel.setFont(new Font("Serif", Font.BOLD, 16));
         lMainGrid.add(topText);
         JPanel lUsernamePanel = new JPanel();
         lUsernamePanel.setLayout(new FlowLayout());
         JLabel lUsernameLabel = new OutlineLabel("Username: ");
+        lUsernameLabel.setFont(new Font("Serif", Font.PLAIN, 20));
+
         taUsername = new JTextField(24);
         taUsername.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+        taUsername.setFont(new Font("Serif", Font.PLAIN, 20));
         taPassword = new JPasswordField("", 24);
+        taPassword.setFont(new Font("Serif", Font.PLAIN, 20));
         JButton loginButton = new JButton("Login");
 
         taUsername.addActionListener(e -> taPassword.requestFocusInWindow());
@@ -44,6 +50,8 @@ public class LoginMenu {
         JPanel lPasswordPanel = new JPanel();
         lPasswordPanel.setLayout(new FlowLayout());
         JLabel lPasswordLabel = new OutlineLabel("Password: ");
+
+        lPasswordLabel.setFont(new Font("Serif", Font.PLAIN, 20));
 
         lPasswordPanel.add(lPasswordLabel);
         lPasswordPanel.add(taPassword);

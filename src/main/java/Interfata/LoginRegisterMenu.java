@@ -25,7 +25,9 @@ public class LoginRegisterMenu {
 
         JPanel lrTopPanel = new JPanel();
         lrTopPanel.setLayout(new FlowLayout());
-        lrTopPanel.add(new OutlineLabel("Menu"));
+        OutlineLabel lrMainMenuLabel = new OutlineLabel("Menu");
+        lrTopPanel.add(lrMainMenuLabel);
+        lrMainMenuLabel.setFont(new Font("Serif", Font.PLAIN, 16));
         lrMainPanel.add(lrTopPanel);
         JPanel lrMidPanel = new JPanel();
         lrMidPanel.setLayout(new FlowLayout());
@@ -78,6 +80,7 @@ public class LoginRegisterMenu {
         lrMainPanel.setVisible(true);
 
         if(error) {
+            errorLabel.setFont(new Font("Serif", Font.PLAIN, 16));
             errorLabel.setVisible(true);
             errorLabel.setText(err_text);
         }

@@ -37,8 +37,10 @@ public class AdminAddZoneMenu {
         JPanel admAZAddVehicle = new JPanel();
         admAZAddVehicle.setLayout(new FlowLayout());
         OutlineLabel pzn = new OutlineLabel("Parking zone name: ");
+        pzn.setFont(new Font("Serif", Font.PLAIN, 20));
         admAZAddVehicle.add(pzn);
         JTextField admAZJTA = new JTextField(24);
+        admAZJTA.setFont(new Font("Serif", Font.PLAIN, 20));
         admAZJTA.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         admAZAddVehicle.add(admAZJTA);
         admAZMenu.add(admAZAddVehicle);

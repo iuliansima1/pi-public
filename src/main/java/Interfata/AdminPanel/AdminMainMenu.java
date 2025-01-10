@@ -27,6 +27,7 @@ public class AdminMainMenu {
         JPanel adminTitlePanel = new JPanel();
         adminTitlePanel.setLayout(new FlowLayout());
         adminTitleLabel = new JLabel("<html><center>Hello, "+ getUserName() +"!<br>Admin menu<center></html>");
+        adminTitleLabel.setFont(new Font("Serif", Font.BOLD, 16));
         adminTitlePanel.add(adminTitleLabel);
         adminMainPanel.add(adminTitlePanel);
         adminTitlePanel.setOpaque(false);
